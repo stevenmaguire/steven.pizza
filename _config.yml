@@ -1,0 +1,14 @@
+# Site settings
+title: Steven Loves Pizza
+email: "&#115;&#116;&#101;&#118;&#101;&#110;&#109;&#097;&#103;&#117;&#105;&#114;&#101;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
+description: >
+  If you're looking for a way to say "thank you", "I appreciate you", "I owe you one",
+  or any other sentiment of gratitude, Steven encourages you to consider buying him a pizza.
+baseurl: ""
+url: "https://steven.pizza"
+enforce_ssl: steven.pizza
+
+# Build settings
+markdown: kramdown
+stripe_key: pk_test_G2Umk2im2LACRwTYZmWkYGZi
+pizza_price_cents: 2000
