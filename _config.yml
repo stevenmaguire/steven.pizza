@@ -10,5 +10,5 @@ enforce_ssl: steven.pizza
 
 # Build settings
 markdown: kramdown
-stripe_key: pk_test_G2Umk2im2LACRwTYZmWkYGZi
+stripe_key: pk_live_LPdOiw2pNiBfcMb2aS95q45J
 pizza_price_cents: 2000
