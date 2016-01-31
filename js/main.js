@@ -14,6 +14,9 @@
 
     $('[role="purchase"]').on('click', function(e) {
         // Open Checkout with further options
+        if (typeof ga == 'function') {
+            ga('send', 'event', 'checkout', 'click', 'buy-pizza');
+        }
         handler.open({
           name: '{{ site.title }}',
           description: '1 pizza',
