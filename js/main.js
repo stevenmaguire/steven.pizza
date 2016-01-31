@@ -6,6 +6,7 @@
         key: '{{ site.stripe_key }}',
         image: '{{ "/images/pizza-not-drugs.gif" | prepend: site.baseurl }}',
         locale: 'auto',
+        panelLabel: "Send {% raw %}{{amount}}{% endraw %} for Pizza",
         token: function(token) {
             // Use the token to create the charge with a server-side script.
             // You can access the token ID with `token.id`
