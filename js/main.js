@@ -7,19 +7,26 @@
         image: '{{ "/images/pizza-not-drugs.gif" | prepend: site.baseurl }}',
         locale: 'auto',
         token: function(token) {
-          // Use the token to create the charge with a server-side script.
-          // You can access the token ID with `token.id`
-          if (typeof ga == 'function') {
-            ga('send', 'event', 'checkout', 'confirm', 'token-' + token, {{ site.pizza_price_cents }});
-          }
-        }
+            // Use the token to create the charge with a server-side script.
+            // You can access the token ID with `token.id`
+            if (typeof ga == 'function') {
+                ga('send', 'event', 'checkout', 'completed', 'token-' + token, {{ site.pizza_price_cents }});
+            }
+        },
+        opened: function () {
+            if (typeof ga == 'function') {
+                ga('send', 'event', 'checkout', 'opened', 'buy-pizza');
+            }
+        },
+        closed: function () {
+            if (typeof ga == 'function') {
+                ga('send', 'event', 'checkout', 'closed', 'buy-pizza');
+            }
+        },
     });
 
     $('[role="purchase"]').on('click', function(e) {
         // Open Checkout with further options
-        if (typeof ga == 'function') {
-            ga('send', 'event', 'checkout', 'click', 'buy-pizza');
-        }
         handler.open({
           name: '{{ site.title }}',
           description: '1 pizza',
