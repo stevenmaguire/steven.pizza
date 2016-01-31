@@ -11,7 +11,7 @@
             // Use the token to create the charge with a server-side script.
             // You can access the token ID with `token.id`
             if (typeof ga == 'function') {
-                ga('send', 'event', 'checkout', 'completed', 'token-' + token, {{ site.pizza_price_cents }});
+                ga('send', 'event', 'checkout', 'completed', 'token-' + token.email + '-' + token.id, {{ site.pizza_price_cents }});
             }
         },
         opened: function () {
