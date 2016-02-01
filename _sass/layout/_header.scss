@@ -47,7 +47,8 @@
             @include vendor('transform', 'translateX(0)');
             opacity: 1;
             text-align: center;
-            margin: (_size(element-margin) * -1.75) (_size(element-margin) * 2) 0 0;
+            // margin: (_size(element-margin) * -1.75) (_size(element-margin) * 2) 0 0;
+            margin: 2em;
 
             > :last-child {
                 margin-bottom: 0;
@@ -77,7 +78,7 @@
                 min-height: 0;
 
                 .content {
-                    margin: (_size(element-margin) * -1) (_size(element-margin) * 2) 0 0;
+                    //margin: (_size(element-margin) * -1) (_size(element-margin) * 2) 0 0;
                 }
 
                 // Portrait.
@@ -89,7 +90,7 @@
                             display: block;
                             width: 100%;
                             text-align: center;
-                            margin: 0 0 _size(element-margin) 0;
+                            //margin: 0 0 _size(element-margin) 0;
                         }
 
                         .image {
@@ -117,7 +118,7 @@
                         @include padding(2em, 2em);
 
                         .content {
-                            margin: 0 _size(element-margin) _size(element-margin) 0;
+                            // margin: 0 _size(element-margin) _size(element-margin) 0;
                         }
 
                         .image {
