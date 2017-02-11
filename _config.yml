@@ -11,4 +11,7 @@ enforce_ssl: steven.pizza
 # Build settings
 markdown: kramdown
 stripe_key: pk_live_LPdOiw2pNiBfcMb2aS95q45J
+# stripe_key: pk_test_G2Umk2im2LACRwTYZmWkYGZi
 pizza_price_cents: 2000
+payment_gateway_method: POST
+payment_gateway_url: https://csuqwi3e38.execute-api.us-east-1.amazonaws.com/prod/stevensPizzaHandler
