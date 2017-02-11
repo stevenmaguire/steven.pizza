@@ -12,10 +12,10 @@
             // You can access the token ID with `token.id`
             var tokenUuid = 'token-' + token.email + '-' + token.id;
             if (typeof ga == 'function') {
-                ga('send', 'event', 'checkout', 'tokenCreated', tokenUuid, {% raw %}{{amount}}{% endraw %});
+                ga('send', 'event', 'checkout', 'tokenCreated', tokenUuid, {{ site.pizza_price_cents }});
             }
             var http_request;
-            var params = { 'token': token.id, 'email': token.email, 'amount': {% raw %}{{amount}}{% endraw %} };
+            var params = { 'token': token.id, 'email': token.email, 'amount': {{ site.pizza_price_cents }} };
             http_request = new XMLHttpRequest();
             http_request.onreadystatechange = function () {
                 var response = null;
