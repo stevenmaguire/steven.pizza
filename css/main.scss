@@ -67,6 +67,14 @@
     @import 'layout/main';
     @import 'layout/footer';
 
+header h2 a {
+    text-decoration: underline;
+    color: #4696e5 !important;
+    &:hover {
+        color: #74b0ec !important;
+    }
+}
+
 pre {
     margin: 1rem;
     padding: 1rem;
