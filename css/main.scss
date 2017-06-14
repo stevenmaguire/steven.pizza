@@ -37,6 +37,12 @@
         @include color-typography($p);
     }
 
+    @mixin border-radius($radius) {
+      -webkit-border-radius: $radius;
+      border-radius: $radius;
+      background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+    }
+
 // Base.
 
     @import 'base/page';
@@ -60,3 +66,11 @@
     @import 'layout/header';
     @import 'layout/main';
     @import 'layout/footer';
+
+pre {
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px solid #ccc;
+    background: #fff;
+    @include border-radius(10px);
+}
