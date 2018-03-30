@@ -69,9 +69,9 @@
         var carousel = $(this).find('[role="carousel"]');
         data.images = data.images || [];
         var slides = data.images.map(function (image) {
-            carousel.append($('<figure class="4u 12u(mobile)"><img src="'+image.url+'" /></figure>'));
+            carousel.append($('<figure><img src="'+image.url+'" /></figure>'));
         });
-        gallery.show();
+        gallery.slideDown(500);
     })
     if (pizzaPictures.length) {
         var httpRequest = new XMLHttpRequest();
