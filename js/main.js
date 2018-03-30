@@ -62,6 +62,34 @@
         e.preventDefault();
     });
 
+    // Pizza Pictures
+    var pizzaPictures = $('[role="pizza-pictures"]');
+    pizzaPictures.on('slides:added', function (e, data) {
+        var gallery = $(this);
+        var carousel = $(this).find('[role="carousel"]');
+        data.images = data.images || [];
+        var slides = data.images.map(function (image) {
+            carousel.append($('<figure class="4u 12u(mobile)"><img src="'+image.url+'" /></figure>'));
+        });
+        gallery.show();
+    })
+    if (pizzaPictures.length) {
+        var httpRequest = new XMLHttpRequest();
+        httpRequest.onreadystatechange = function () {
+            var response = null;
+            if (httpRequest.responseText) {
+                response = JSON.parse(httpRequest.responseText);
+            }
+            if (httpRequest.readyState == 4) {
+                if (httpRequest.status == 200) {
+                    pizzaPictures.trigger('slides:added', { images: response });
+                }
+            }
+        };
+        httpRequest.open('{{site.pizza_gallery_method}}', '{{site.pizza_gallery_url}}');
+        httpRequest.send();
+    }
+
     // Close Checkout on page navigation
     $(window).on('popstate', function() {
         handler.close();
