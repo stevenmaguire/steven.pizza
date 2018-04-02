@@ -80,6 +80,7 @@
             columnWidth: '.grid-sizer',
             itemSelector: '.grid-item',
             percentPosition: true,
+            initLayout: false,
         });
 
         grid.one('layoutComplete', function () {
@@ -87,12 +88,10 @@
         });
 
         grid.imagesLoaded( function() {
-            grid.masonry();
+            gallery.slideDown(500, function () {
+                grid.masonry();
+            });
         });
-
-        gallery.slideDown(500);
-
-        window.dispatchEvent(new Event('resize'));
     });
     if (pizzaPictures.length) {
         var httpRequest = new XMLHttpRequest();
