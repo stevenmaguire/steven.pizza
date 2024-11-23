@@ -50,5 +50,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
         run: |
           echo "############### CACHE INVALIDATION ##############"
-          aws cloudfront create-invalidation --distribution-id E3GJ51VYLCVA9S --paths="/*" --region ${{ vars.S3_REGION }}
-          aws cloudfront create-invalidation --distribution-id E2UD2V9B3SPYOH --paths="/*" --region ${{ vars.S3_REGION }}
+          aws cloudfront create-invalidation --distribution-id ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }} --paths="/*" --region ${{ vars.S3_REGION }}
