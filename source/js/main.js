@@ -57,6 +57,7 @@
     $('[role="purchase"]').each(function () {
         $(this).on('click', function (event) {
             event.stopPropagation();
+            event.preventDefault();
             try {
                 var divElement = document.getElementById('bmc-wbtn');
                 var imageElement = divElement.querySelector("img");
