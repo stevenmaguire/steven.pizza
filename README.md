@@ -1,6 +1,6 @@
 ## steven.pizza
 
-If you are looking for a way to say "thank you", "I appreciate you", "I owe you one", or any other sentiment of gratitude, powered by [Jigsaw](https://jigsaw.tighten.com/docs/installation/).
+If you are looking for a way to say "thank you", "I appreciate you", "I owe you one", or any other sentiment of gratitude, powered by [Jigsaw](https://jigsaw.tighten.com/docs/installation/)!
 
 ## getting started
 
